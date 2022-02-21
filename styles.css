@@ -88,11 +88,13 @@ body {
     text-transform: uppercase;
 }
 
+body.light .calculator .clear,
 .calculator .clear {
     grid-column: span 2;
     width: 180px;
     background: #f00;
 }
+body.light .calculator .clear::before,
 .calculator .clear::before {
     background: linear-gradient(90deg, #d20000, #ffffff5c);
     border-left: 1px solid #fff4;
@@ -103,12 +105,64 @@ body {
     grid-row: span 2;
     height: 180px;
 }
+body.light .container .equal,
 .container .equal {
     background: #2196f3;
 }
+body.light .container .equal::before,
 .container .equal::before {
     background: linear-gradient(90deg, #1479c9, #ffffff5c);
     border-left: 1px solid #fff4;
     border-bottom: 1px solid #fff4;
     border-top: 1px solid #fff4;
+}
+
+/* Light Mode */
+body.light {
+    background: #f8f8f8;
+}
+body.light .container {
+    background: #fafafa;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.15),
+    10px 10px 70px rgba(0, 0, 0, .15),
+    inset -5px -5px 15px rgba(0, 0, 0, .15),
+    inset 5px 5px 15px rgba(0, 0, 0, .05);
+}
+body.light .btn strong:nth-child(1) {
+    display: none;
+}
+body.light .btn strong:nth-child(2) {
+    display: block;
+}
+body.light .calculator span {
+    background: linear-gradient(180deg, #fafafa, #f4f4f4);
+    box-shadow: -8px 0 8px rgba(0, 0, 0, .15),
+    inset  0 -8px 8px rgba(0, 0, 0, .15),
+    0 0 0 2px rgba(0, 0, 0, 1),
+    10px 20px 25px rgba(0, 0, 0, .25);
+}
+body.light .calculator span::before{
+    background: linear-gradient(90deg, #e6e6e6, #efefef);
+    border-radius: 10px;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, .25),
+    10px 5px 10px rgba(0, 0, 0, .15);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff9;
+}
+body.light .calculator span:active {
+    filter: brightness(0.9);
+}
+body.light span i {
+    color: #333;
+}
+body.light span.clear i,
+body.light span.equal i {
+    color: #fff;
+}
+.btn strong {
+    display: none;
+}
+.btn strong:nth-child(1) {
+    display: block;
 }
